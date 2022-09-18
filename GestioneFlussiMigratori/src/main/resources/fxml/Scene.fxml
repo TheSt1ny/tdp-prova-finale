@@ -109,7 +109,7 @@
                                           <Insets left="40.0" />
                                        </HBox.margin>
                                     </VBox>
-                                    <TextArea fx:id="txt1" prefHeight="114.0" prefWidth="300.0">
+                                    <TextArea fx:id="txt1" disable="true" editable="false" prefHeight="114.0" prefWidth="300.0">
                                        <HBox.margin>
                                           <Insets bottom="10.0" left="20.0" right="20.0" top="27.0" />
                                        </HBox.margin></TextArea>
@@ -147,7 +147,7 @@
                                                       <Insets right="20.0" top="3.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <TextField fx:id="txtMigrantiMorti" />
+                                                <TextField fx:id="txtMigrantiMorti" disable="true" editable="false" />
                                              </children>
                                              <VBox.margin>
                                                 <Insets top="140.0" />
@@ -160,7 +160,7 @@
                                                       <Insets right="20.0" top="3.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <TextField fx:id="txtMigrantiNordAfrica1" />
+                                                <TextField fx:id="txtMigrantiNordAfrica1" disable="true" editable="false" />
                                              </children>
                                              <VBox.margin>
                                                 <Insets top="20.0" />
@@ -199,7 +199,7 @@
                                        <HBox.margin>
                                           <Insets right="20.0" top="3.0" />
                                        </HBox.margin></Label>
-                                    <TextField fx:id="txtMigrantiNordAfrica2" />
+                                    <TextField fx:id="txtMigrantiNordAfrica2" disable="true" editable="false" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="20.0" top="10.0" />
@@ -233,7 +233,7 @@
                                        <HBox.margin>
                                           <Insets left="50.0" right="10.0" top="35.0" />
                                        </HBox.margin></Label>
-                                    <Slider fx:id="sliderApproccio" blockIncrement="1.0" max="7.9" min="2.1" showTickLabels="true" showTickMarks="true">
+                                    <Slider fx:id="sliderApproccio" blockIncrement="1.0" max="7.9" min="2.1" showTickLabels="true" showTickMarks="true" value="5.0">
                                        <HBox.margin>
                                           <Insets left="10.0" top="38.0" />
                                        </HBox.margin></Slider>

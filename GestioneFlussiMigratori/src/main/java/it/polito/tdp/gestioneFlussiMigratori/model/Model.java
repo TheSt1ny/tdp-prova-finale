@@ -52,8 +52,6 @@ public class Model {
 		System.out.println("# Vertici: " + this.grafo.vertexSet().size());
 		System.out.println("# Archi: " + this.grafo.edgeSet().size());
 		
-		ConnectivityInspector<Country, DefaultEdge> con = new ConnectivityInspector<Country, DefaultEdge>(this.grafo);
-		System.out.println(con.connectedSets());
 		
 	}
 	
@@ -126,12 +124,21 @@ public class Model {
 		double approccioVero = approccio+(segno1*v1)+(segno2*v2);
 		
 		List<Integer> lista = new ArrayList<Integer>();
-		lista.add((int)((approccioVero/10)*migranti));
-		lista.add(migranti - lista.get(0));
-		lista.add(10000*lista.get(1));
+		lista.add(0, (int)((approccioVero/10)*migranti));
+		lista.add(1, migranti - (lista.get(0)));
+		if(lista.get(1)<0) {
+			lista.add(1, ((lista.get(1))*(-1)));
+		}
+		lista.add(2, 100000*lista.get(1));
+		if(lista.get(2)<0) {
+			lista.add(2, (lista.get(2)*(-1)));
+		}
 		double num = lista.get(1);
 		double den = this.idMap.get(c.getCountry()).getPopulation();
-		lista.add((int)(den/num));
+		int f = (int)(den/num);
+		if(f<0) 
+			f = ((f)*(-1));
+		lista.add(3, f);
 		return lista;
 	}
 	

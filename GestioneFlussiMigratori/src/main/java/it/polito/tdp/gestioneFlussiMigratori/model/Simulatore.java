@@ -82,22 +82,22 @@ public class Simulatore {
 		double fattore = 0.0;
 		switch(this.tipo) {
 		case "Epidemia":
-			fattore = 0.07;
+			fattore = 0.007;
 			break;
 		case "Guerra":
-			fattore = 0.1;
+			fattore = 0.01;
 			break;
 		case "Carestia":
-			fattore = 0.07;
+			fattore = 0.007;
 			break;
 		case "Disastro Ambientale":
-			fattore = 0.07;
+			fattore = 0.007;
 			break;
 		case "Persecuzione":
-			fattore = 0.05;
+			fattore = 0.005;
 			break;
 		case "Povertà":
-			fattore = 0.05;
+			fattore = 0.005;
 			break;
 		default:
 			fattore = 0;
