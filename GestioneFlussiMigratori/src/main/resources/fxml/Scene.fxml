@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.gestioneFlussiMigratori.FXMLController">
+   <center>
+      <TabPane prefHeight="944.0" prefWidth="927.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Simulazione">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="915.0" prefWidth="791.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="Seleziona Eventi">
+                                 <VBox.margin>
+                                    <Insets left="350.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="btnCreaMondo" mnemonicParsing="false" onAction="#doCreaMondo" text="Crea Mondo">
+                                       <HBox.margin>
+                                          <Insets left="150.0" top="65.0" />
+                                       </HBox.margin></Button>
+                                    <ImageView fx:id="imgMondo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="90.0" top="10.0" />
+                                       </HBox.margin></ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <VBox prefHeight="148.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="Nazione">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="50.0" />
+                                             </VBox.margin></Label>
+                                          <ComboBox fx:id="cmbNazione1" prefHeight="25.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbNazione2" prefHeight="25.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbNazione3" prefHeight="25.0" prefWidth="150.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Evento">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="50.0" />
+                                             </VBox.margin></Label>
+                                          <ComboBox fx:id="cmbEvento1" prefHeight="25.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbEvento2" prefHeight="25.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbEvento3" prefHeight="25.0" prefWidth="150.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Gravità">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="5.0" />
+                                             </VBox.margin></Label>
+                                          <ComboBox fx:id="cmbGravity1">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbGravity2">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin></ComboBox>
+                                          <ComboBox fx:id="cmbGravity3" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <TextArea fx:id="txt1" prefHeight="114.0" prefWidth="300.0">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="27.0" />
+                                       </HBox.margin></TextArea>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="btnReset1" mnemonicParsing="false" onAction="#onReset1" text="Reset" />
+                                    <Button fx:id="btnConferma1" mnemonicParsing="false" onAction="#onConferma1" text="Conferma">
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin></Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <TableView fx:id="tableView" prefHeight="400.0" prefWidth="351.0">
+                                      <columns>
+                                        <TableColumn fx:id="tableNazione" prefWidth="232.66665136814117" text="Nazione" />
+                                        <TableColumn fx:id="tableMorti" prefWidth="116.00001525878906" text="Morti" />
+                                      </columns>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TableView>
+                                    <VBox prefHeight="400.0" prefWidth="378.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="126.0" text="Totale migranti morti">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" top="3.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtMigrantiMorti" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="140.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label text="Totale migranti coste NordAfrica">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" top="3.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtMigrantiNordAfrica1" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="40.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Gestione">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="Gestisci il flusso migratorio">
+                                 <VBox.margin>
+                                    <Insets left="350.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <Label text="Totale migranti coste NordAfrica">
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="3.0" />
+                                       </HBox.margin></Label>
+                                    <TextField fx:id="txtMigrantiNordAfrica2" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Scegli Nazione">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Scegli approccio">
+                                       <HBox.margin>
+                                          <Insets left="320.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <ComboBox fx:id="cmbNazioneOspitante" prefHeight="25.0" prefWidth="149.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="35.0" />
+                                       </HBox.margin></ComboBox>
+                                    <ImageView fx:id="imgNazioneOspitante" fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="50.0" top="10.0" />
+                                       </HBox.margin></ImageView>
+                                    <Label text="Accogliente">
+                                       <HBox.margin>
+                                          <Insets left="50.0" right="10.0" top="35.0" />
+                                       </HBox.margin></Label>
+                                    <Slider fx:id="sliderApproccio" blockIncrement="1.0" max="7.9" min="2.1" showTickLabels="true" showTickMarks="true">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="38.0" />
+                                       </HBox.margin></Slider>
+                                    <Label text="Respingente">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="35.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="btnReset2" mnemonicParsing="false" onAction="#onReset2" text="Reset">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="50.0" />
+                                       </HBox.margin></Button>
+                                    <Button fx:id="btnConferma2" mnemonicParsing="false" onAction="#onConferma2" text="Conferma" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></TextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
